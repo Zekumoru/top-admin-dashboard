@@ -23,6 +23,10 @@ body {
     "sidebar main";
 }
 
+div {
+  border: 2px solid red;
+}
+
 .sidebar {
   background-color: var(--sidebar-bg-color);
   grid-area: sidebar;
@@ -34,6 +38,23 @@ body {
 .main-header {
   background-color: var(--main-header-bg-color);
   grid-area: header;
+  display: grid;
+  grid-template: 80px 1fr / 1fr auto;
+  grid-template-areas: 
+    "search profile"
+    "nav nav";
+}
+
+.main-header .search {
+  grid-area: search;
+}
+
+.main-header .profile {
+  grid-area: profile;
+}
+
+.main-header .nav {
+  grid-area: nav;
 }
 
 .main-content {
