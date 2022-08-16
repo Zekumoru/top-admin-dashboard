@@ -86,6 +86,11 @@ aside,
 }
 
 .main-header .search,
+.main-header .nav {
+  padding-left: 40px;
+}
+
+.main-header .search,
 .main-header .profile {
   display: flex;
   align-items: center;
@@ -93,7 +98,7 @@ aside,
 
 .main-header .search {
   grid-area: search;
-  padding: 0 120px 0 40px;
+  padding-right: 120px;
   gap: 16px;
 }
 
@@ -115,6 +120,37 @@ aside,
 
 .main-header .nav {
   grid-area: nav;
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.main-header .nav .user {
+  flex: 1;
+  display: grid;
+  grid-template: auto 1fr / auto 1fr;
+  grid-template-areas:
+    "profile-pic greeting"
+    "profile-pic username";
+}
+
+.main-header .nav .profile-pic {
+  width: 60px;
+  height: 60px;
+  grid-area: profile-pic;
+}
+
+.main-header .nav .greeting {
+  grid-area: greeting;
+}
+
+.main-header .nav .username {
+  grid-area: username;
+}
+
+.main-header .buttons {
+  display: flex;
+  gap: 24px;
 }
 
 .main-content {
