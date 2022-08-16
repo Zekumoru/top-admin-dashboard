@@ -1,0 +1,39 @@
+:root {
+  --sidebar-bg-color: #0090D5;
+  --main-header-bg-color: #FFFFFF;
+  --main-content-bg-color: #E1E8F0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  display: grid;
+  grid-template: 180px 1fr / 260px 1fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+}
+
+.sidebar {
+  background-color: var(--sidebar-bg-color);
+  grid-area: sidebar;
+}
+
+.main-header {
+  background-color: var(--main-header-bg-color);
+  grid-area: header;
+}
+
+.main-content {
+  background-color: var(--main-content-bg-color);
+  grid-area: main;
+}
