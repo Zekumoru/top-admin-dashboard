@@ -24,7 +24,8 @@ body {
 }
 
 div,
-aside {
+aside,
+.sidebar > ul {
   border: 2px solid red;
 }
 
@@ -36,11 +37,21 @@ aside {
   gap: 40px;
 }
 
-.sidebar .logo {
+.sidebar .logo,
+.sidebar li > a {
   display: flex;
-  padding: 16px;
   place-items: center;
+}
+
+.sidebar .logo {
+  padding: 16px;
   gap: 12px;
+}
+
+.sidebar li > a {
+  padding: 12px 16px 12px 28px;
+  gap: 16px;
+  cursor: pointer;
 }
 
 .logo .icon {
@@ -50,6 +61,11 @@ aside {
 
 .logo .title {
   flex: 1;
+}
+
+.sidebar li .icon {
+  width: 24px;
+  height: 24px;
 }
 
 .main-header {
