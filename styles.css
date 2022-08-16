@@ -70,7 +70,7 @@ aside,
   margin: 0 auto;
 }
 
-.sidebar li .icon {
+.icon {
   width: 24px;
   height: 24px;
 }
@@ -85,12 +85,32 @@ aside,
     "nav nav";
 }
 
+.main-header .search,
+.main-header .profile {
+  display: flex;
+  align-items: center;
+}
+
 .main-header .search {
   grid-area: search;
+  padding: 0 120px 0 40px;
+  gap: 16px;
+}
+
+.main-header .search-bar {
+  height: 30px;
+  flex: 1;
 }
 
 .main-header .profile {
   grid-area: profile;
+  gap: 24px;
+  padding-right: 60px;
+}
+
+.main-header .profile .profile-pic {
+  width: 40px;
+  height: 40px;
 }
 
 .main-header .nav {
