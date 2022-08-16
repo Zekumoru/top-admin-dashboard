@@ -26,6 +26,9 @@ body {
 .sidebar {
   background-color: var(--sidebar-bg-color);
   grid-area: sidebar;
+  display: grid;
+  grid-template-rows: 80px auto 1fr;
+  gap: 40px;
 }
 
 .main-header {
