@@ -41,26 +41,33 @@ aside,
 .sidebar li > a {
   display: flex;
   place-items: center;
+  padding: 16px;
 }
 
 .sidebar .logo {
-  padding: 16px;
   gap: 12px;
 }
 
 .sidebar li > a {
-  padding: 12px 16px 12px 28px;
   gap: 16px;
   cursor: pointer;
 }
 
-.logo .icon {
+.logo .icon,
+.sidebar li .wrapper {
   width: 50px;
+}
+
+.logo .icon {
   height: 50px;
 }
 
 .logo .title {
   flex: 1;
+}
+
+.center {
+  margin: 0 auto;
 }
 
 .sidebar li .icon {
