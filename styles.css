@@ -23,7 +23,8 @@ body {
     "sidebar main";
 }
 
-div {
+div,
+aside {
   border: 2px solid red;
 }
 
@@ -60,4 +61,21 @@ div {
 .main-content {
   background-color: var(--main-content-bg-color);
   grid-area: main;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 270px;
+  grid-template-areas: 
+    "projects announcements"
+    "projects trending";
+}
+
+.main-content .projects {
+  grid-area: projects;
+}
+
+.main-content .announcements {
+  grid-area: announcements;
+}
+
+.main-content .trending {
+  grid-area: trending;
 }
