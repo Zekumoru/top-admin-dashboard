@@ -113,9 +113,10 @@ aside,
   padding-right: 60px;
 }
 
-.main-header .profile .profile-pic {
+.profile-pic {
   width: 40px;
   height: 40px;
+  border-radius: 50%;
 }
 
 .main-header .nav {
@@ -173,7 +174,7 @@ aside,
   flex-direction: column;
 }
 
-.announcements .content {
+aside .content {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -183,4 +184,29 @@ aside,
 
 .main-content .trending {
   grid-area: trending;
+}
+
+.trending .content {
+  gap: 16px;
+}
+
+.trending .content > div {
+  display: grid;
+  grid-template: auto auto / auto 1fr;
+  grid-template-areas: 
+    "profile-pic user"
+    "profile-pic description";
+    column-gap: 12px;
+}
+
+.trending .profile-pic {
+  grid-area: profile-pic;
+}
+
+.trending .user {
+  grid-area: user;
+}
+
+.trending .description {
+  grid-area: description;
 }
