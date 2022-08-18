@@ -10,6 +10,15 @@
   margin: 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 html,
 body {
   min-height: 100%;
@@ -25,7 +34,8 @@ body {
 
 div,
 aside,
-.sidebar > ul {
+.sidebar > ul,
+.main-content li {
   border: 2px solid red;
 }
 
@@ -162,10 +172,22 @@ aside,
   grid-template-areas: 
     "projects announcements"
     "projects trending";
+  padding: 28px 16px;
 }
 
 .main-content .projects {
   grid-area: projects;
+}
+
+.projects .cards {
+  --gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc(50% - var(--gap)), 1fr));
+  gap: var(--gap);
+}
+
+.cards p {
+  height: 100px;
 }
 
 .main-content .announcements {
@@ -210,3 +232,4 @@ aside .content {
 .trending .description {
   grid-area: description;
 }
+
