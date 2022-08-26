@@ -1,5 +1,6 @@
 :root {
   --sidebar-bg-color: #0090D5;
+  --sidebar-hover-bg-color: #079fe6;
   --main-header-bg-color: #FFFFFF;
   --main-content-bg-color: #E1E8F0;
   --sidebar-text-color: #FFFFFF;
@@ -28,7 +29,7 @@ body {
 
 body {
   display: grid;
-  grid-template: 180px 1fr / 260px 1fr;
+  grid-template: 180px 1fr / 300px 1fr;
   grid-template-areas:
     "sidebar header"
     "sidebar main";
@@ -98,7 +99,7 @@ aside,
   grid-area: sidebar;
   display: grid;
   grid-template-rows: 80px auto 1fr;
-  gap: 40px;
+  gap: 20px;
   color: var(--sidebar-text-color);
 }
 
@@ -106,7 +107,7 @@ aside,
 .sidebar li > a {
   display: flex;
   place-items: center;
-  padding: 16px;
+  padding: 12px 16px;
 }
 
 .sidebar .logo {
@@ -114,8 +115,14 @@ aside,
 }
 
 .sidebar li > a {
-  gap: 16px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  gap: 8px;
   cursor: pointer;
+}
+
+.sidebar li > a:hover {
+  background-color: var(--sidebar-hover-bg-color);
 }
 
 .logo .icon,
@@ -129,6 +136,7 @@ aside,
 
 .logo .title {
   flex: 1;
+  font-size: 1.6rem;
 }
 
 .center {
