@@ -94,6 +94,39 @@ aside,
   background-image: url(./icons/bell.svg);
 }
 
+.main-header .profile-pic {
+  background-image: url(./images/pikasonic.jpeg);
+  background-size: 100%;
+}
+
+.trending .profile-pic {
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.profile-pic.morgan {
+  background-image: url(./images/cat.png);
+  background-color: #FFD005;
+}
+
+.profile-pic.tegan {
+  background-image: url(./images/dog.png);
+  background-color: #DBF3FE;
+}
+
+.profile-pic.kendall {
+  background-image: url(./images/spiderman.png);
+  background-color: #A3A3A3;
+  background-size: 55%;
+}
+
+.profile-pic.alex {
+  background-image: url(./images/pengiun.png);
+  background-color: #FF92AF;
+  background-size: 60%;
+}
+
 .sidebar {
   background-color: var(--sidebar-bg-color);
   grid-area: sidebar;
