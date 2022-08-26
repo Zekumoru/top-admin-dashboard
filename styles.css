@@ -33,12 +33,12 @@ body {
     "sidebar main";
 }
 
-div,
+/* div,
 aside,
 .sidebar > ul,
 .main-content li {
   border: 2px solid red;
-}
+} */
 
 .sidebar {
   background-color: var(--sidebar-bg-color);
