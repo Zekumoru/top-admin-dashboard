@@ -2,6 +2,7 @@
   --sidebar-bg-color: #0090D5;
   --main-header-bg-color: #FFFFFF;
   --main-content-bg-color: #E1E8F0;
+  --sidebar-text-color: #FFFFFF;
 }
 
 * {
@@ -40,12 +41,65 @@ aside,
   border: 2px solid red;
 } */
 
+.filter-white {
+  filter: invert(100%) sepia(0%) saturate(7478%) hue-rotate(60deg) brightness(109%) contrast(105%);
+}
+
+.icon.dashboard {
+  background-image: url(./icons/dashboard.svg);
+}
+
+.icon.home {
+  background-image: url(./icons/home.svg);
+}
+
+.icon.profile {
+  background-image: url(./icons/profile.svg);
+}
+
+.icon.messages {
+  background-image: url(./icons/message.svg);
+}
+
+.icon.history {
+  background-image: url(./icons/clock.svg);
+}
+
+.icon.tasks {
+  background-image: url(./icons/files.svg);
+}
+
+.icon.communities {
+  background-image: url(./icons/people.svg);
+}
+
+.icon.settings {
+  background-image: url(./icons/cog.svg);
+}
+
+.icon.support {
+  background-image: url(./icons/help-box.svg);
+}
+
+.icon.privacy {
+  background-image: url(./icons/shield-check.svg);
+}
+
+.icon.search {
+  background-image: url(./icons/magnify.svg);
+}
+
+.icon.notifications {
+  background-image: url(./icons/bell.svg);
+}
+
 .sidebar {
   background-color: var(--sidebar-bg-color);
   grid-area: sidebar;
   display: grid;
   grid-template-rows: 80px auto 1fr;
   gap: 40px;
+  color: var(--sidebar-text-color);
 }
 
 .sidebar .logo,
@@ -96,18 +150,18 @@ aside,
     "nav nav";
 }
 
-.main-header .search,
+.main-header > .search,
 .main-header .nav {
   padding-left: 40px;
 }
 
-.main-header .search,
+.main-header > .search,
 .main-header .profile {
   display: flex;
   align-items: center;
 }
 
-.main-header .search {
+.main-header > .search {
   grid-area: search;
   padding-right: 120px;
   gap: 16px;
