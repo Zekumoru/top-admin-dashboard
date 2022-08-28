@@ -3,6 +3,7 @@
   --sidebar-hover-bg-color: #079fe6;
   --main-header-bg-color: #FFFFFF;
   --main-content-bg-color: #E1E8F0;
+  --search-bar-bg-color: #E1E8F0;
   --sidebar-text-color: #FFFFFF;
 }
 
@@ -209,8 +210,11 @@ aside,
 }
 
 .main-header .search-bar {
-  height: 30px;
+  --height: 30px;
+  height: var(--height);
   flex: 1;
+  background-color: var(--search-bar-bg-color);
+  border-radius: var(--height);
 }
 
 .main-header .profile {
