@@ -30,9 +30,10 @@ body {
 
 body {
   display: grid;
-  grid-template: 176px 1fr / 300px 1fr;
+  grid-template: 80px 96px 1fr / 300px 1fr;
   grid-template-areas:
     "sidebar header"
+    "sidebar user-panel"
     "sidebar main";
 }
 
@@ -95,7 +96,8 @@ aside,
   background-image: url(./icons/bell.svg);
 }
 
-.main-header .profile-pic {
+.main-header .profile-pic,
+.user-panel .profile-pic {
   background-image: url(./images/pikasonic.jpeg);
   background-size: 100%;
 }
@@ -182,48 +184,51 @@ aside,
   height: 24px;
 }
 
-.main-header {
-  background-color: var(--main-header-bg-color);
-  grid-area: header;
-  display: grid;
-  grid-template: 80px 1fr / 1fr auto;
-  grid-template-areas: 
-    "search profile"
-    "nav nav";
+.main-header,
+.user-panel {
   font-size: 1rem;
   font-weight: 600;
 }
 
-.main-header .nav .greeting-text {
+.user-panel {
+  grid-area: user-panel;
+}
+
+.main-header {
+  grid-area: header;
+  background-color: var(--main-header-bg-color);
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-right: 76px;
+}
+
+.user-panel .greeting-text {
   font-size: 0.9rem;
   font-weight: 500;
 }
 
-.main-header .nav .username {
+.user-panel .username {
   font-size: 1.3rem;
 }
 
-.main-header > .search,
-.main-header .nav {
+.main-header,
+.user-panel {
   padding-left: 40px;
 }
 
-.main-header > .search,
-.main-header .profile {
+.main-header > .search {
+  flex: 1;
   display: flex;
   align-items: center;
-}
-
-.main-header > .search {
-  grid-area: search;
-  padding-right: 120px;
+  padding-right: 100px;
   gap: 16px;
 }
 
 .main-header .search-bar {
+  flex: 1;
   --height: 30px;
   height: var(--height);
-  flex: 1;
   background-color: var(--search-bar-bg-color);
   border-radius: var(--height);
 }
@@ -234,39 +239,34 @@ aside,
   padding: 0 60px 0 16px;
 }
 
-.main-header .profile > *:not(:last-child) {
-  flex-shrink: 0;
-}
-
 .profile-pic {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
 
-.main-header .nav {
-  grid-area: nav;
+.user-panel {
   display: flex;
   align-items: center;
   padding-right: 50px;
   gap: 16px;
 }
 
-.main-header .nav .profile-pic {
+.user-panel .profile-pic {
   width: 60px;
   height: 60px;
 }
 
-.main-header .nav .user {
+.user-panel .user {
   flex: 1;
 }
 
-.main-header .buttons {
+.nav {
   display: flex;
   gap: 30px;
 }
 
-.main-header .nav button {
+.user-panel button {
   --height: 36px;
   height: var(--height);
   width: 96px;
@@ -279,7 +279,7 @@ aside,
   cursor: pointer;
 }
 
-.main-header .nav button:hover {
+.user-panel button:hover {
   background-color: var(--primary-hover-color);
 }
 
@@ -294,8 +294,6 @@ aside,
   padding: 28px 16px;
   gap: 16px;
 }
-
-
 
 .main-content .projects {
   grid-area: projects;
