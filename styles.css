@@ -190,10 +190,6 @@ aside,
   font-weight: 600;
 }
 
-.user-panel {
-  grid-area: user-panel;
-}
-
 .main-header {
   grid-area: header;
   background-color: var(--main-header-bg-color);
@@ -201,15 +197,6 @@ aside,
   align-items: center;
   gap: 30px;
   padding-right: 76px;
-}
-
-.user-panel .greeting-text {
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-.user-panel .username {
-  font-size: 1.3rem;
 }
 
 .main-header,
@@ -246,10 +233,20 @@ aside,
 }
 
 .user-panel {
+  grid-area: user-panel;
   display: flex;
   align-items: center;
   padding-right: 50px;
   gap: 16px;
+}
+
+.user-panel .greeting-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.user-panel .username {
+  font-size: 1.3rem;
 }
 
 .user-panel .profile-pic {
@@ -261,7 +258,7 @@ aside,
   flex: 1;
 }
 
-.nav {
+.user-panel .nav {
   display: flex;
   gap: 30px;
 }
