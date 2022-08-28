@@ -190,6 +190,17 @@ aside,
   grid-template-areas: 
     "search profile"
     "nav nav";
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.main-header .nav .greeting-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.main-header .nav .username {
+  font-size: 1.3rem;
 }
 
 .main-header > .search,
