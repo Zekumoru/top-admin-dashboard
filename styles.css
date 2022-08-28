@@ -1,10 +1,10 @@
 :root {
-  --sidebar-bg-color: #0090D5;
-  --sidebar-hover-bg-color: #079fe6;
+  --primary-color: #0090D5;
+  --primary-hover-color: #079fe6;
   --main-header-bg-color: #FFFFFF;
   --main-content-bg-color: #E1E8F0;
   --search-bar-bg-color: #E1E8F0;
-  --sidebar-text-color: #FFFFFF;
+  --primary-text-color: #FFFFFF;
 }
 
 * {
@@ -30,7 +30,7 @@ body {
 
 body {
   display: grid;
-  grid-template: 180px 1fr / 300px 1fr;
+  grid-template: 176px 1fr / 300px 1fr;
   grid-template-areas:
     "sidebar header"
     "sidebar main";
@@ -129,12 +129,12 @@ aside,
 }
 
 .sidebar {
-  background-color: var(--sidebar-bg-color);
+  background-color: var(--primary-color);
   grid-area: sidebar;
   display: grid;
   grid-template-rows: 80px auto 1fr;
   gap: 20px;
-  color: var(--sidebar-text-color);
+  color: var(--primary-text-color);
 }
 
 .sidebar .logo,
@@ -156,7 +156,7 @@ aside,
 }
 
 .sidebar li > a:hover {
-  background-color: var(--sidebar-hover-bg-color);
+  background-color: var(--primary-hover-color);
 }
 
 .logo .icon,
@@ -263,7 +263,24 @@ aside,
 
 .main-header .buttons {
   display: flex;
-  gap: 24px;
+  gap: 30px;
+}
+
+.main-header .nav button {
+  --height: 36px;
+  height: var(--height);
+  width: 96px;
+  border-radius: var(--height);
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.main-header .nav button:hover {
+  background-color: var(--primary-hover-color);
 }
 
 .main-content {
@@ -277,6 +294,8 @@ aside,
   padding: 28px 16px;
   gap: 16px;
 }
+
+
 
 .main-content .projects {
   grid-area: projects;
