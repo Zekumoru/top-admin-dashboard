@@ -322,7 +322,7 @@ body {
 .projects .cards {
   --gap: 24px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc(50% - var(--gap)), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: var(--gap);
 }
 
