@@ -197,6 +197,7 @@ body {
 .user-panel {
   font-size: 1rem;
   font-weight: 600;
+  padding: 16px 40px;
 }
 
 .main-header {
@@ -206,11 +207,6 @@ body {
   align-items: center;
   gap: 30px;
   padding-right: 76px;
-}
-
-.main-header,
-.user-panel {
-  padding-left: 40px;
 }
 
 .main-header > .search {
