@@ -303,6 +303,11 @@ body {
   gap: 20px;
 }
 
+.card h2,
+.card h3 {
+  cursor: pointer;
+}
+
 .main-content p {
   color: var(--main-text-color);
 }
@@ -432,4 +437,8 @@ body {
 
 .trending .description {
   grid-area: description;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
