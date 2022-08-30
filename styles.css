@@ -219,10 +219,14 @@ body {
 .main-header .search-bar {
   flex: 1;
   max-width: 750px;
-  --height: 30px;
+  --height: 36px;
   height: var(--height);
   background-color: var(--search-bar-bg-color);
   border-radius: var(--height);
+  outline: none;
+  border: none;
+  padding: 0 18px;
+  font-size: 1rem;
 }
 
 .main-header .profile {
