@@ -359,7 +359,7 @@ body {
   gap: 20px;
 }
 
-.projects .card button {
+.button-style-white {
   background-color: transparent;
   border-radius: var(--icon-size);
   border: none;
@@ -367,7 +367,7 @@ body {
   cursor: pointer;
 }
 
-.projects .card button:hover {
+.button-style-white:hover {
   background-color: var(--main-content-bg-color);
 }
 
