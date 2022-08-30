@@ -209,6 +209,10 @@ body {
   padding-right: 76px;
 }
 
+.main-header > * {
+  flex-shrink: 0;
+}
+
 .main-header > .search {
   flex: 1;
   display: flex;
@@ -218,6 +222,7 @@ body {
 
 .main-header .search-bar {
   flex: 1;
+  width: 0;
   max-width: 750px;
   --height: 36px;
   height: var(--height);
