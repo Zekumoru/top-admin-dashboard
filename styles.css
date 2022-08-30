@@ -6,6 +6,7 @@
   --divider-color: #c8c8c8;
   --search-bar-bg-color: #E1E8F0;
   --primary-text-color: #FFFFFF;
+  --main-text-color: #636363;
   --card-stripe-color: #FDB423;
   --icon-size: 24px;
 }
@@ -302,6 +303,10 @@ body {
   gap: 20px;
 }
 
+.main-content p {
+  color: var(--main-text-color);
+}
+
 .main-content .projects {
   grid-area: projects;
 }
@@ -376,6 +381,7 @@ body {
 .aside .announcements h3 {
   font-weight: 500;
   font-size: 1rem;
+  margin-bottom: 4px;
 }
 
 .aside .announcements p {
@@ -406,6 +412,7 @@ body {
 .trending .content {
   gap: 24px;
   padding: 24px;
+  font-size: 0.9rem;
 }
 
 .trending .content > div {
@@ -428,4 +435,3 @@ body {
 .trending .description {
   grid-area: description;
 }
-
