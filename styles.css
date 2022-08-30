@@ -6,6 +6,7 @@
   --search-bar-bg-color: #E1E8F0;
   --primary-text-color: #FFFFFF;
   --card-stripe-color: #FDB423;
+  --icon-size: 24px;
 }
 
 * {
@@ -97,6 +98,18 @@ aside,
   background-image: url(./icons/bell.svg);
 }
 
+.icon.star {
+  background-image: url(./icons/star-plus.svg);
+}
+
+.icon.watch {
+  background-image: url(./icons/eye-plus.svg);
+}
+
+.icon.fork {
+  background-image: url(./icons/fork.svg);
+}
+
 .main-header .profile-pic,
 .user-panel .profile-pic {
   background-image: url(./images/pikasonic.jpeg);
@@ -181,8 +194,8 @@ aside,
 }
 
 .icon {
-  width: 24px;
-  height: 24px;
+  width: var(--icon-size);
+  height: var(--icon-size);
 }
 
 .main-header,
@@ -336,6 +349,24 @@ aside,
   font-weight: 300;
   font-size: 1.1rem;
   flex: 1;
+}
+
+.projects .card .buttons {
+  align-self: flex-end;
+  display: flex;
+  gap: 20px;
+}
+
+.projects .card button {
+  background-color: transparent;
+  border-radius: var(--icon-size);
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.projects .card button:hover {
+  background-color: var(--main-content-bg-color);
 }
 
 .main-content .announcements {
