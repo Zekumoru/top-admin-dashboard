@@ -1,10 +1,11 @@
 :root {
   --primary-color: #0090D5;
   --primary-hover-color: #079fe6;
-  --main-header-bg-color: #FFFFFF;
+  --main-bg-color: #FFFFFF;
   --main-content-bg-color: #E1E8F0;
   --search-bar-bg-color: #E1E8F0;
   --primary-text-color: #FFFFFF;
+  --card-stripe-color: #FDB423;
 }
 
 * {
@@ -192,7 +193,7 @@ aside,
 
 .main-header {
   grid-area: header;
-  background-color: var(--main-header-bg-color);
+  background-color: var(--main-bg-color);
   display: flex;
   align-items: center;
   gap: 30px;
@@ -286,7 +287,7 @@ aside,
   background-color: var(--main-content-bg-color);
   grid-area: main;
   display: grid;
-  grid-template: 1fr 1fr / 1fr 270px;
+  grid-template: 1fr 1fr / 1fr 300px;
   grid-template-areas: 
     "projects announcements"
     "projects trending";
@@ -301,6 +302,7 @@ aside,
 .projects > h2 {
   font-weight: 500;
   font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 .projects .cards {
@@ -310,8 +312,30 @@ aside,
   gap: var(--gap);
 }
 
-.cards p {
-  height: 100px;
+.projects .card a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.projects .card {
+  background-color: var(--main-bg-color);
+  padding: 36px 26px;
+  border-radius: 8px;
+  box-shadow: 2px 4px 4px 0px rgb(207, 207, 207);
+  border-left: 8px solid var(--card-stripe-color);
+}
+
+.projects .card h3 {
+  font-weight: 500;
+} 
+
+.projects .card p {
+  min-height: 100px;
+  font-weight: 300;
+  font-size: 1.1rem;
+  flex: 1;
 }
 
 .main-content .announcements {
