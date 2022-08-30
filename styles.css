@@ -3,6 +3,7 @@
   --primary-hover-color: #079fe6;
   --main-bg-color: #FFFFFF;
   --main-content-bg-color: #E1E8F0;
+  --divider-color: #c8c8c8;
   --search-bar-bg-color: #E1E8F0;
   --primary-text-color: #FFFFFF;
   --card-stripe-color: #FDB423;
@@ -372,6 +373,20 @@ body {
   gap: 40px;
 }
 
+.aside .announcements h3 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.aside .announcements p {
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.divider {
+  border-top: 1px solid var(--divider-color);
+}
+
 .aside .trending {
   flex: 1;
 }
@@ -381,10 +396,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 16px;
+}
+
+.announcements .content div:not(.divider) {
+  padding: 0 4px;
 }
 
 .trending .content {
-  gap: 16px;
+  gap: 24px;
+  padding: 24px;
 }
 
 .trending .content > div {
