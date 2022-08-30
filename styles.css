@@ -39,13 +39,6 @@ body {
     "sidebar main";
 }
 
-/* div,
-aside,
-.sidebar > ul,
-.main-content li {
-  border: 2px solid red;
-} */
-
 .filter-white {
   filter: invert(100%) sepia(0%) saturate(7478%) hue-rotate(60deg) brightness(109%) contrast(105%);
 }
@@ -300,12 +293,12 @@ aside,
   background-color: var(--main-content-bg-color);
   grid-area: main;
   display: grid;
-  grid-template: 1fr 1fr / 1fr 300px;
+  grid-template: 1fr / 1fr 300px;
   grid-template-areas: 
-    "projects announcements"
-    "projects trending";
+    "projects aside";
   padding: 28px 16px;
-  gap: 16px;
+  padding-right: 32px;
+  gap: 20px;
 }
 
 .main-content .projects {
@@ -316,6 +309,13 @@ aside,
   font-weight: 500;
   font-size: 1.2rem;
   margin-bottom: 10px;
+}
+
+.card {
+  background-color: var(--main-bg-color);
+  padding: 36px 26px;
+  border-radius: 8px;
+  box-shadow: 2px 4px 4px 0px rgb(207, 207, 207);
 }
 
 .projects .cards {
@@ -333,10 +333,6 @@ aside,
 }
 
 .projects .card {
-  background-color: var(--main-bg-color);
-  padding: 36px 26px;
-  border-radius: 8px;
-  box-shadow: 2px 4px 4px 0px rgb(207, 207, 207);
   border-left: 8px solid var(--card-stripe-color);
 }
 
@@ -369,22 +365,22 @@ aside,
   background-color: var(--main-content-bg-color);
 }
 
-.main-content .announcements {
-  grid-area: announcements;
+.main-content .aside {
+  height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 40px;
 }
 
-aside .content {
+.aside .trending {
+  flex: 1;
+}
+
+.aside .content {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 16px;
-}
-
-.main-content .trending {
-  grid-area: trending;
 }
 
 .trending .content {
