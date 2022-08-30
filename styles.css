@@ -34,7 +34,7 @@ body {
 
 body {
   display: grid;
-  grid-template: 80px minmax(96px, auto) 1fr / 300px 1fr;
+  grid-template: 80px auto 1fr / 300px 1fr;
   grid-template-areas:
     "sidebar header"
     "sidebar user-panel"
